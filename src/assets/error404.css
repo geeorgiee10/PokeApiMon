@@ -1,0 +1,81 @@
+.Error404 {
+    font-family: 'Arial', sans-serif;
+    background: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    margin: 0;
+  }
+  
+  .containerError {
+    text-align: center;
+  }
+  
+  .message {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+
+  .logoLetra{
+    width: 5%;
+  }
+  
+  .h1Error {
+    font-size: 36px;
+    color: #ff0000;
+    margin: 0;
+  }
+  
+  .h2Error {
+    font-size: 80px;
+    margin: 10px 0;
+    color: #000;
+  }
+  
+  .icon {
+    margin: 20px 0;
+  }
+  
+  .pokeball {
+    width: 100px;
+    animation: spin 3s infinite linear;
+  }
+  
+  p {
+    font-size: 20px;
+    margin: 20px 0;
+  }
+  
+  .back-button {
+    width: 20rem;
+    text-decoration: none;
+    background-color: var(--color-pikachu);
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  
+  .back-button:hover {
+    padding: 15px 25px;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @media(max-width: 1100px){
+    .logoLetra{
+        width: 20%;
+      }
+  }

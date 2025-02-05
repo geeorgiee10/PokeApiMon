@@ -1,0 +1,37 @@
+@import url(./header.css); 
+@import url(./footer.css);
+@import url(./listado.css);
+@import url(./detalles.css);
+@import url(./juego.css);
+@import url(./landingPage.css);
+@import url(./login.css);
+@import url(./ranking.css);
+@import url(./error404.css);
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root {
+    --color-principal: #FF0000; 
+    --color-texto-secundario: #FFFFFF;
+    --color-secundario: #FFCC00;
+    --color-pikachu: #FFD700;
+    --color-pokemon-azul: #3466af;
+    --color-pokemon-negro: #1a1a1a;
+
+    --radius: 10px;
+    --pokemon-font: 'Press Start 2P', cursive;
+
+}
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+main{
+    flex: 1;
+    height: auto;
+}

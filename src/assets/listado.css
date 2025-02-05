@@ -1,0 +1,54 @@
+.contenedor{
+    padding: 1rem;
+}
+
+.card{
+    width: 20%;
+    align-items: center;
+}
+
+.imgCard{
+    object-fit: contain;
+    width: 70%;    
+}
+
+.btn-primary{
+    width: 100%;
+    background-color: var(--color-principal);
+    border: none;
+    transition: all 0.3s;
+}
+
+.btn-primary:hover, .btn-primary:active{
+    transform: scale(1.05);
+    background-color: var(--color-texto-secundario);
+    color: var(--color-principal);
+    border: 1px solid var(--color-principal) !important;
+}
+
+.btnCargar{
+    width: 25rem;
+    height: 4rem;
+    font-size: 2rem;
+    border: 1px solid var(--color-principal);
+    border-radius: var(--radius);
+    background-color: var(--color-texto-secundario);
+    color: var(--color-principal);
+    transition: all 1s;
+    margin: auto;
+}
+
+.btnCargar:hover{
+    transform: scale(1.1);
+}
+
+@media(max-width: 1100px){
+    .card {
+        width: 40%;
+    }
+
+    .btnCargar {
+        font-size: 1.5rem;
+        height: 3.5rem;
+    }
+}

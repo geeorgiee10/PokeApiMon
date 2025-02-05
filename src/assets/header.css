@@ -1,0 +1,80 @@
+/* Variables */  
+  .navbar {
+    background-color: var(--color-principal) !important;
+    padding: 0.5rem 1rem;
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-texto-secundario);
+  }
+  
+  .navbar-nav .nav-link {
+    color: var(--color-texto-secundario);
+    font-weight: 500;
+    margin: 0 0.5rem;
+    border-radius: 10px;
+    padding: 0.5rem;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    background-color: var(--color-texto-secundario);
+    color: var(--color-principal);
+  }
+
+  .logo {
+    width: 10%;
+  }
+  
+  .imgLogo {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .navbar-toggler{
+    background-color: var(--color-secundario);
+    border: 1px solid ;
+  }
+
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='40' height='40' role='img' aria-label='Pokémon Logo Hamburger Menu Icon'%3E%3Ccircle cx='50' cy='50' r='40' fill='%23FF0000' /%3E%3Cpath d='M10 50 a40 40 0 0 0 80 0' fill='%23FFFFFF' /%3E%3Ccircle cx='50' cy='50' r='40' fill='none' stroke='%23000000' stroke-width='4' /%3E%3Cline x1='10' y1='50' x2='90' y2='50' stroke='%23000000' stroke-width='4' /%3E%3Ccircle cx='50' cy='50' r='10' fill='%23FFFFFF' stroke='%23000000' stroke-width='3' /%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 3rem; 
+    height: 3rem;
+  }
+
+  .LinkRouter{
+    text-decoration: none;
+    list-style: none;
+  }
+  
+  .nombreUsuario{
+    color: var(--color-texto-secundario);
+    font-size: 1.5rem;
+    text-align: center;
+    margin-left: 3rem;
+  }
+
+
+  @media (max-width: 992px) {
+    .logo {
+      width: 20%; 
+    }
+  
+    .navbar-nav {
+      text-align: center;
+    }
+  
+    .nav-item {
+      margin-bottom: 0.5rem;
+    }
+
+    .nombreUsuario{
+      margin-left: 0;
+    }
+  }
+  

@@ -1,0 +1,124 @@
+
+.juego{
+    height: auto;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    text-align: center;
+}
+
+.juego h2{
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--color-secundario); 
+    text-transform: uppercase;
+    text-shadow: 4px 4px 0px var(--color-pokemon-azul), 8px 8px 0px var(--color-pokemon-negro); 
+    letter-spacing: 2px;
+    border-bottom: 4px solid var(--color-pokemon-azul); 
+    padding-bottom: 5px;
+    font-family: var(--pokemon-font);
+    display: inline-block; 
+}
+
+.card{
+    width: 20% !important;
+}
+
+.imgCardOculto {
+    width: 40%;
+    filter: grayscale(100%) brightness(0) contrast(100%);
+}
+
+
+.btnJuego{
+    width: 20%;
+    color: var(--color-texto-secundario);
+    border-radius: var(--radius);
+}
+
+.types-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+}
+
+.bg-primary{
+    background-color: var(--color-principal) !important;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.labelForm {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 8px 12px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+
+.inputForm {
+    border-radius: var(--radius);
+    border: 2px solid #ddd; 
+    background-color: #f5f5f5; 
+    height: 2.5rem;
+    padding: 0.8rem 1rem;
+    width: 100%; 
+    font-size: 1rem; 
+    color: #333; 
+    transition: all 0.3s; 
+}
+
+.inputForm:focus {
+    border-color: var(--color-principal); 
+    background-color: #fff; 
+    box-shadow: 2px 4px 8px rgba(255, 0, 0, 0.2); 
+}
+
+.btn-secondary{
+    background-color: var(--color-texto-secundario);
+    border: 1px solid var(--color-principal);
+    color: var(--color-principal);
+    border-radius: var(--radius);
+    font-size: 1.2rem;
+    transition: all 1s;
+}
+
+.btn-secondary:hover{
+    transform: scale(1.1);
+}
+
+@media(max-width: 1100px){
+    .btnJuego{
+        width: 70%;
+        font-size: 1.5rem !important;
+    }
+
+    .juego h2{
+        font-size: 1.5rem;
+    }
+
+    .labelForm {
+        font-size: 1.2rem;
+    }
+
+    .card{
+        width: 60% !important;
+    }
+}
+

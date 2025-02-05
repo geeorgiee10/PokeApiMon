@@ -1,0 +1,37 @@
+footer {
+    margin-top: auto;
+    z-index: 1;
+}
+
+.enlaceGithub{
+    color: var(--color-pikachu); 
+    text-decoration: none;
+}
+
+.enlaceGithub:hover {
+    color: #FF8C00; 
+}
+
+.social-icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.iconos{
+    color: var(--color-pikachu) !important;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.iconos:hover {
+    color: #FF8C00 !important;
+}
+
+@media(max-width: 1100px){
+    .social-icons{
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
