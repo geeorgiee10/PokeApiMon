@@ -1,25 +1,30 @@
-import { collection, getDocs, query } from "firebase/firestore";
+import { collection, getDocs, query, orderBy } from "firebase/firestore";
 import { db } from "../../firebase";
 import { useState, useEffect } from 'react';
 
 
 export function Rankings() {
-    const [puntos, setPuntos] = useState([]);
-    const [usuarios, setUsuario] = useState([]);
+  const [ranking, setRanking] = useState([]); 
 
     
     useEffect(() => { 
     const sacarPuntos = async () => {
             try {
-                const consulta = query(collection(db, 'ranking'));
-                const consultaPuntosUsuario = await getDocs(consulta);
+              const consulta = query(collection(db, 'ranking'), orderBy('Puntuacion', 'desc'));
+              const consultaPuntosUsuario = await getDocs(consulta);
               
                 if(!consultaPuntosUsuario.empty){
+                    const rankingsData = [];
                     consultaPuntosUsuario.forEach((doc) => {
-                        //console.log(doc.data());
-                        setPuntos(prevPuntos => [...prevPuntos, doc.data().Puntuacion]);
-                        setUsuario(prevUsuarios => [...prevUsuarios, doc.data().NombreUsuario]);
-                    });                
+                      rankingsData.push({
+                        NombreUsuario: doc.data().NombreUsuario,
+                        Puntuacion: doc.data().Puntuacion,
+                      });
+                    });    
+                    
+                    rankingsData.sort((a, b) => b.Puntuacion - a.Puntuacion);
+
+                    setRanking(rankingsData);
                 }
             } 
             catch (error) {
@@ -42,11 +47,11 @@ export function Rankings() {
             </tr>
           </thead>
           <tbody>
-            {usuarios.map((usuario, index)  => 
+            {ranking.map((rank, index)  => 
               (
                 <tr key={index}>
-                  <td>{usuario}</td>
-                  <td>{puntos[index]}</td>
+                  <td>{rank.NombreUsuario}</td>
+                  <td>{rank.Puntuacion}</td>
                 </tr>
               ))
             }
